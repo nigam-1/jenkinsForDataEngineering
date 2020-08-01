@@ -5,9 +5,7 @@ import boto3
 aws_access_key_id = "AKIA2IR3LIDOU25LKD43"
 aws_secret_access_key ="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"
 
-ec2client = boto3.client('ec2',aws_access_key_id="AKIA2IR3LIDOU25LKD43", 
-                      aws_secret_access_key="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, 
-                      region_name="ap-south-1")
+ec2client = boto3.client('ec2',aws_access_key_id="AKIA2IR3LIDOU25LKD43",aws_secret_access_key="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",region_name="ap-south-1")
 response = ec2client.describe_instances()
 for reservation in response["Reservations"]:
     for instance in reservation["Instances"]:

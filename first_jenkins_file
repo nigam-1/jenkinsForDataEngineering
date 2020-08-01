@@ -3,8 +3,7 @@ pipeline {
 		stages {
 			stage("stage 1") {
 				steps {
-					echo "Hello World"
-					echo "Hello World 2"
+					sh 'python check_ec2_instance'
 					}
 				}
 			}	

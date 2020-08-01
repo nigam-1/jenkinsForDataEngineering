@@ -1,7 +1,7 @@
 import boto3
 
    
-ec2client = boto3.client('ec2')
+ec2client = boto3.client('ec2',region_name='ap-south-1')
 response = ec2client.describe_instances()
 for reservation in response["Reservations"]:
     for instance in reservation["Instances"]:
